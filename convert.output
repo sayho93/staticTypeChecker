@@ -1,0 +1,48 @@
+Begin parsing... programs/convert.cpp
+
+Program (abstract syntax):
+	Declarations:
+		Declaration = {<f,float>, <i,int>, <c,char>}
+	Block:
+		Assignment:
+			Variable: c
+			CharValue: a
+		Assignment:
+			Variable: i
+			IntValue: 77
+		Assignment:
+			Variable: f
+			Binary:
+				Operator: -
+				Variable: i
+				Unary:
+					Operator: int
+					Variable: c
+
+Begin type checking...programs/convert.cpp
+
+Type map:
+{ <c, char>, <f, float>, <i, int>, }
+
+Begin parsing... programs/convert.cpp
+
+Program (abstract syntax):
+	Declarations:
+		Declaration = {<f,float>, <i,int>, <c,char>}
+	Block:
+		Assignment:
+			Variable: c
+			CharValue: a
+		Assignment:
+			Variable: i
+			IntValue: 77
+		Assignment:
+			Variable: f
+			Unary:
+				Operator: I2F
+				Binary:
+					Operator: INT-
+					Variable: i
+					Unary:
+						Operator: C2I
+						Variable: c

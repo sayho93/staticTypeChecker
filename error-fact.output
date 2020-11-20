@@ -1,0 +1,78 @@
+Begin parsing... programs/error-fact.cpp
+
+Program (abstract syntax):
+	Declarations:
+		Declaration = {<n,float>, <i,float>, <i,int>, <j,int>}
+	Block:
+		Assignment:
+			Variable: n
+			Binary:
+				Operator: +
+				FloatValue: 3.0
+				IntValue: 7
+		Assignment:
+			Variable: i
+			FloatValue: 1.0
+		Assignment:
+			Variable: f
+			FloatValue: 1.0
+		Assignment:
+			Variable: j
+			Binary:
+				Operator: +
+				FloatValue: 0.0
+				IntValue: 1
+		Loop:
+			Binary:
+				Operator: <
+				Variable: i
+				Variable: n
+			Block:
+				Assignment:
+					Variable: i
+					Binary:
+						Operator: +
+						Binary:
+							Operator: +
+							Variable: i
+							FloatValue: 1.0
+						CharValue: c
+				Assignment:
+					Variable: f
+					Binary:
+						Operator: *
+						Variable: f
+						Variable: i
+		Loop:
+			Binary:
+				Operator: <
+				Variable: j
+				Variable: n
+			Block:
+				Assignment:
+					Variable: j
+					Binary:
+						Operator: +
+						Binary:
+							Operator: +
+							Variable: j
+							IntValue: 1
+						CharValue: c
+				Assignment:
+					Variable: j
+					Binary:
+						Operator: *
+						Variable: f
+						Variable: i
+				Assignment:
+					Variable: j
+					Binary:
+						Operator: *
+						Variable: j
+						Variable: n
+
+Begin type checking...programs/error-fact.cpp
+
+Type map:
+{ <i, int>, <j, int>, <n, float>, }
+
